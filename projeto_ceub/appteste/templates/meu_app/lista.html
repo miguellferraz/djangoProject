@@ -5,22 +5,22 @@
 {% block conteudo %}
 <h2>Lista de Produtos</h2>
 
-<table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+<table>
     <thead>
-        <tr style="background-color: #f2f2f2;">
-            <th style="border: 1px solid #ddd; padding: 8px;">Nome</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">Preço</th>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
         </tr>
     </thead>
     <tbody>
         {% for produto in produtos %}
         <tr>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">{{ produto.nome }}</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">R$ {{ produto.preco }}</td>
+            <td><a href="{% url 'detail_product' produto.pk %}">{{ produto.nome }}</a></td>
+            <td><a href="{% url 'detail_product' produto.pk %}">R$ {{ produto.preco }}</a></td>
         </tr>
         {% empty %}
         <tr>
-            <td colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: center;">
+            <td colspan="2">
                 Nenhum produto encontrado
             </td>
         </tr>
