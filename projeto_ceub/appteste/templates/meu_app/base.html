@@ -1,0 +1,78 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Meu Site{% endblock %}</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>Meu Site</header>
+
+    <nav>
+        <a href="{% url 'index' %}">Início</a>
+        <a href="{% url 'sobre' %}">Sobre</a>
+        <a href="{% url 'listar_produtos' %}">Produtos</a>
+        <a href="{% url 'contatos' %}">Contato</a>
+    </nav>
+
+    <main>
+        {% block conteudo %} <!-- Conteúdo --> {% endblock %}
+    </main>
+
+    <footer>&copy; {{ now|date:"Y" }} Todos os direitos reservados.</footer>
+</body>
+</html>
