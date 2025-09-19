@@ -1,0 +1,20 @@
+{% extends "meu_app/base.html" %}
+
+{% block title %}Adicionar Produto{% endblock %}
+
+{% block conteudo %}
+
+{% load static %}
+<link rel="stylesheet" href={% static "meu_app/css/form_produto.css" %}>
+
+<h2>Adicionar Produto</h2>
+
+<div class="form-container">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Adicionar</button>
+        <a href="{% url 'lista_produtos' %}">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

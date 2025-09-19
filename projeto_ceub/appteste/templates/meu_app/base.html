@@ -1,127 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>{% block title %}Meu Site{% endblock %}</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: arial;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        nav {
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 30px;
-            font-size: 14px;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
-
-        main table {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: #fff;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        main thead {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        main th, main td {
-            padding: 12px 15px;
-            text-align: left;
-        }
-
-        main tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        main tbody tr:hover {
-            background-color: #e0f7e0;
-        }
-
-        main a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
-
-        main a:hover {
-            color: #4CAF50;
-        }
-
-        main td[colspan="2"] {
-            text-align: center;
-            font-style: italic;
-            color: #888;
-        }
-</style>
-
-</head>
-<body>
-    <header>Meu Site</header>
-
-    <nav>
-        <a href="{% url 'index' %}">Início</a>
-        <a href="{% url 'sobre' %}">Sobre</a>
-        <a href="{% url 'listar_produtos' %}">Produtos</a>
-        <a href="{% url 'contatos' %}">Contato</a>
-    </nav>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'meu_app/css/base.css' %}" />
+  </head>
+  <body>
+    <div class="header-container">
+      <header>
+        <div class="logo">
+          <img src="{% static 'meu_app/images/logo.png' %}" alt="Logo" class="logo"/>
+        </div>
+        <nav class="navbar">
+          <a href="{% url 'index' %}">Início</a>
+          <a href="{% url 'sobre' %}">Sobre</a>
+          <a href="{% url 'contatos' %}">Contato</a>
+          <a href="{% url 'lista_produtos' %}">Produtos</a>
+        </nav>
+      </header>
+    </div>
 
     <main>
-        {% block conteudo %} <!-- Conteúdo --> {% endblock %}
+      {% block conteudo %}
+      <!-- Conteúdo -->
+      {% endblock %}
     </main>
 
     <footer>&copy; {{ now|date:"Y" }} Todos os direitos reservados.</footer>
-</body>
+  </body>
 </html>

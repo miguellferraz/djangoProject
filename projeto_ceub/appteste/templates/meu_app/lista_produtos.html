@@ -1,0 +1,55 @@
+{% extends "meu_app/base.html" %}
+
+{% block title %}Produtos{% endblock %}
+
+{% block conteudo %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'meu_app/css/lista.css' %}">
+
+<h2>Lista de Produtos</h2>
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for produto in produtos %}
+        <tr>
+            <td>{{ produto.id }}</td>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.preco }}</td>
+            <td>{{ produto.categoria }}</td>
+
+            <td>
+                <a href="{% url 'editar_produto' produto.id %}">Editar</a> |
+                <a href="{% url 'apagar_produto' produto.id %}">Deletar</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">Nenhum produto cadastrado.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+<div class="add-container">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'adicionar_produto' %}">
+            <button type="button">Adicionar novo Produto</button>
+        </a>
+    </form>
+</div>
+
+
+{% endblock %}

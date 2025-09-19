@@ -1,0 +1,25 @@
+.add-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+button {
+    background-color: #4CAF50; /* verde */
+    color: white; /* texto branco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
