@@ -1,0 +1,12 @@
+{% extends "meu_app/base.html" %}
+
+{% block title %}Cadastrar Produto{% endblock %}
+
+{% block conteudo %}
+  <h2>Cadastrar Produto</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+  </form>
+{% endblock %}

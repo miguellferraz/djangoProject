@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import Produto
+from .forms import ProdutoForm
 
 def index(request):
     return render(request, 'meu_app/index.html', {})
@@ -22,3 +23,14 @@ def detail_product(request, id):
 
 def contatos(request):
     return render(request, 'meu_app/contato.html', {})
+
+def cadastrar_produto(request):
+    if request.method == "POST":
+        form = ProdutoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("listar_produtos")  # vamos criar essa rota depois
+    else:
+        form = ProdutoForm()
+    
+    return render(request, "meu_app/produto_form.html", {"form": form})
