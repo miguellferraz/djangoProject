@@ -3,5 +3,11 @@
 {% block title %}Lista de Produtos{% endblock %}
 
 {% block conteudo %}
-<h2>Aqui tem meus Contato</h2>
+
+{% load static %}
+    <link rel="stylesheet" href="{% static "meu_app/css/contato.css"%}">
+
+    <h2>Aqui tem meus Contato</h2>
+    <a href="https://github.com/miguellferraz" target='_blank'>Github</a>
+    <a href="https://www.linkedin.com/in/miguelclferraz/" target='_blank'>Linkedin</a>
 {% endblock %}
