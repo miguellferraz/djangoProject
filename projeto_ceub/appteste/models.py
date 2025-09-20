@@ -7,10 +7,20 @@ class Produto(models.Model):
         ("Alimentos", "Alimentos"),
         ("Outros", "Outros"),
     ]
+
+    CORES = [
+        ("Preto", "Preto"),
+        ("Branco", "Branco"),
+        ("Azul", "Azul"),
+        ("Cinza", "Cinza"),
+        ("Vinho", "Vinho"),
+
+    ]
     
     nome = models.CharField(max_length=100)
     preco = models.DecimalField(max_digits=6, decimal_places=2)
     descricao = models.TextField()
+    cor = models.CharField(max_length=50, choices=CORES)
     quantidade_estoque = models.IntegerField()
     url = models.URLField()
     categoria = models.CharField(max_length=50, choices=CATEGORIAS)

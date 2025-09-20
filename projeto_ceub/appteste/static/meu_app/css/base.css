@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
 body {
-    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    font-family: arial;
     padding-top: 80px;
-    background-color: #f5f3f4;
+    font-family: "Instrument Sans", sans-serif;
+    background-color: #ffffff;
 }
  
 .header-container {
@@ -15,17 +19,17 @@ body {
 }
 
 .logo {
-    height: 50px;
+    margin-left: 20px;
+    height: 60px;
     width: auto;
 }
 
 header {
-    background-color: #a1a1a1;
-    color: #1d296d;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding: 15px;
+    padding: 10px;
 
     position: fixed;
     top: 0;
@@ -39,15 +43,13 @@ header {
 }
 
 .navbar a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin-right: 20px;
-    font-weight: bold;
-    transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #ddd;
+    color: #383838;
 }
 
 main {
@@ -57,63 +59,18 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 
 footer {
-    background-color: #414833;
+    background-color: #383838;
     color: white;
     text-align: center;
     padding: 15px 0;
     margin-top: 30px;
     font-size: 14px;
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
 }
 
-main table {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-main thead {
-    background-color: #4caf50;
-    color: white;
-}
-
-main th,
-main td {
-    padding: 12px 15px;
-    text-align: left;
-}
-
-main tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-main tbody tr:hover {
-    background-color: #e0f7e0;
-}
-
-main a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-}
-
-main a:hover {
-    color: #4caf50;
-}
-
-main td[colspan="2"] {
-    text-align: center;
-    font-style: italic;
-    color: #888;
-}
