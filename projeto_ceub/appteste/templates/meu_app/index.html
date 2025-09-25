@@ -1,7 +1,35 @@
 {% extends "meu_app/base.html" %}
 
-{% block title %}Lista de Produtos{% endblock %}
-
+{% block title %}miles{% endblock %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'meu_app/css/index.css' %}">
 {% block conteudo %}
-    <h2>Aqui é o index</h2>
+<h1>Nossas Camisas</h1>
+
+<div class="grid">
+    <div class="item">
+        <img src="{% static 'meu_app/images/camisa1.png' %}" alt="Camisa 1">
+        <p>Camisa 1</p>
+    </div>
+    <div class="item">
+        <img src="{% static 'meu_app/images/camisa2.png' %}" alt="Camisa 2">
+        <p>Camisa 2</p>
+    </div>
+    <div class="item">
+        <img src="{% static 'meu_app/images/camisa3.png' %}" alt="Camisa 3">
+        <p>Camisa 3</p>
+    </div>
+    <div class="item">
+        <img src="{% static 'meu_app/images/camisa4.png' %}" alt="Camisa 4">
+        <p>Camisa 4</p>
+    </div>
+    <div class="item">
+        <img src="{% static 'meu_app/images/camisa5.png' %}" alt="Camisa 5">
+        <p>Camisa 5</p>
+    </div>
+    <div class="item">
+        <img src="{% static 'meu_app/images/camisa6.png' %}" alt="Camisa 6">
+        <p>Camisa 6</p>
+    </div>
+</div>
 {% endblock %}
