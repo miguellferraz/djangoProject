@@ -6,54 +6,12 @@ body {
     min-height: 100vh;
     margin: 0;
     padding-top: 80px;
-    font-family: "Instrument Sans", sans-serif;
+    font-family: 'Instrument Sans';
     background-color: #ffffff;
-}
- 
-.header-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.logo {
-    margin-left: 20px;
-    height: 60px;
-    width: auto;
-}
-
-header {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 10px;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.navbar {
-    margin-right: 50px;
-}
-
-.navbar a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-.navbar a:hover {
-    color: #383838;
 }
 
 main {
-    max-width: 900px;
+    min-width: 95vw;
     margin: 20px auto;
     background: #ffffff;
     padding: 20px;
@@ -73,4 +31,47 @@ footer {
     left: 0;
     width: 100%;
 }
+
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    margin-left: 20px;
+    height: 60px;
+    width: auto;
+}
+
+
+.navbar {
+    margin-right: 50px;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    color: #383838;
+}
+
 

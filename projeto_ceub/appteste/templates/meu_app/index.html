@@ -1,9 +1,36 @@
 {% extends "meu_app/base.html" %}
 
 {% block title %}miles{% endblock %}
-{% load static %}
-    <link rel="stylesheet" href="{% static 'meu_app/css/index.css' %}">
+
 {% block conteudo %}
-<h1>Nossas Camisas</h1>
-    
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'meu_app/css/index.css' %}">
+
+    <div class="grid">
+        <div class="camisas">
+            <img src="{% static 'meu_app/images/camisa1.png' %}" alt="camisa goblin azul">
+            <p>camisa midia</p>
+        </div>
+        <div class="camisas">
+            <img src="{% static 'meu_app/images/camisa2.png' %}" alt="camisa goblin preto">
+            <p>camisa midia</p>
+        </div>
+        <div class="camisas">
+            <img src="{% static 'meu_app/images/camisa3.png' %}" alt="camisa goblin branco">
+            <p>camisa midia</p>
+        </div>
+        <div class="camisas">
+            <img src="{% static 'meu_app/images/camisa4.png' %}" alt="camisa goblin branco">
+            <p>camisa midia</p>
+        </div>
+        <div class="camisas">
+            <img src="{% static 'meu_app/images/camisa5.png' %}" alt="camisa goblin branco">
+            <p>camisa midia</p>
+        </div>
+        <div class="camisas">
+            <img src="{% static 'meu_app/images/camisa6.png' %}" alt="camisa goblin branco">
+            <p>camisa midia</p>
+        </div>
+    </div>
 {% endblock %}
