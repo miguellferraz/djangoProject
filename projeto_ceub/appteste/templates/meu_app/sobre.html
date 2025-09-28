@@ -1,9 +1,74 @@
-{% extends "meu_app/base.html" %}
+{% extends "meu_app/base.html" %} 
 
-{% block title %}sobre{% endblock %}
+{% block title %}sobre{% endblock %} 
+{% block body_class %}pagina-sobre{% endblock %} 
 
 {% block conteudo %}
-  <h2>Aqui é o sobre</h2>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam corrupti necessitatibus sed tempore quas, officia tempora repellendus, voluptates autem illo laboriosam? Quibusdam qui possimus suscipit corporis omnis. Laborum, voluptatibus earum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum recusandae natus, dolore cupiditate nemo laborum rem, error ullam voluptatem hic maiores dolor harum? Consectetur officiis nesciunt ea ducimus harum eveniet. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum necessitatibus ipsa non nostrum ullam obcaecati, modi, explicabo neque nisi error sunt. Eaque saepe illo voluptas labore minima, reiciendis aspernatur magni.</p>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, dolorum voluptate velit amet odio odit fuga deserunt adipisci, recusandae incidunt sed consectetur vitae facere delectus, iusto unde obcaecati sapiente laboriosam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt corrupti velit aliquam necessitatibus at omnis, officiis voluptatibus tempora sed magnam maiores odit quis. Accusamus dolor unde impedit, sit repudiandae ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quam distinctio nam obcaecati amet, excepturi saepe molestias! Temporibus eaque adipisci quis labore nesciunt officiis, aut impedit culpa alias quasi? Quos?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur quia consequatur perspiciatis! Iusto cupiditate hic saepe labore voluptates quidem deserunt dolore explicabo architecto, sint mollitia maiores accusantium quae nemo eos. </p>
+{% load static %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="{% static 'meu_app/css/sobre.css' %}" />
+
+<h1>O que é a Miles?</h1>
+
+<p>
+  Na Miles, acreditamos que a vida é uma coleção de momentos, e que o valor de
+  cada um deles não pode ser medido, mas sim vivido. Nascemos da filosofia de
+  que "Every mile counts on your journey" (Cada milha conta na sua jornada).
+  Essa não é apenas uma frase; é a bússola que guia o design e a qualidade de
+  cada peça que criamos.
+</p>
+
+<p>
+  Não vendemos apenas roupas; oferecemos a você um uniforme de atitude feito
+  para o movimento e para a expressão autêntica.
+</p>
+
+<h2>Vestindo o Propósito</h2>
+
+<p>
+  O nome Miles representa mais do que distância — ele simboliza progresso,
+  resiliência e o caminho que você está construindo.
+</p>
+
+<p>
+  Nossas coleções são pensadas para o explorador urbano, para o criador e para
+  todos que entendem que grandes conquistas são o resultado de pequenos e
+  consistentes passos. Cada peça da Miles é:
+</p>
+
+<ul>
+  <li>
+    Feita para Durar: Utilizamos materiais que resistem ao ritmo intenso da
+    vida, valorizando a qualidade sobre a efemeridade da moda.
+  </li>
+
+  <li>
+    Design com Intenção: Nosso estilo mistura o essencial com o moderno, criando
+    um look que é tão confortável quanto marcante.
+  </li>
+
+  <li>
+    Autenticidade em Primeiro Lugar: Acreditamos que a melhor roupa é aquela que
+    te permite ser você, sem filtros.
+  </li>
+</ul>
+
+<h2>A Miles começa aqui</h2>
+
+<p>
+  Seja na correria do dia a dia, na busca por uma nova paixão ou na celebração de uma meta alcançada, a Miles está com você. Nossas roupas são feitas para serem usadas, para colecionar histórias e para lembrar que cada esforço, por menor que seja, te leva para frente.
+</p>
+
+<p>
+  <strong>Vista a Miles. Honre a sua jornada.</strong>
+</p>
+
+<div class="logo-sobre" >
+  <a href="https://www.instagram.com/milesmidia/" target="_blank" class="instagram-icon-link">
+    <img src="{% static 'meu_app/logos/logo-sobre.png' %}" alt="sketch logo" class="rotating-instagram-logo">
+    <img src="{% static 'meu_app/logos/logo-sobre-verso2.png' %}" alt="sketch logo verso" class="rotating-instagram-logo-verso">
+  </a>
+</div>
+
 {% endblock %}

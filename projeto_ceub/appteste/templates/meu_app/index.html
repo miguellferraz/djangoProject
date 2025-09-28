@@ -5,31 +5,39 @@
 {% block conteudo %}
 {% load static %}
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="{% static 'meu_app/css/index.css' %}">
 
     <div class="grid">
         <div class="camisas">
-            <img src="{% static 'meu_app/images/camisa1.png' %}" alt="camisa goblin azul">
+            <img src="{% static 'meu_app/images/blue-goblin-shirt.png' %}" alt="camisa goblin azul frente" class="camisa-frente">
+            <img src="{% static 'meu_app/images/blue-goblin-shirt-back.png' %}" alt="camisa goblin azul verso" class="camisa-verso">
             <p>Blue Miles Goblin - R$ 159,99</p>
         </div>
         <div class="camisas">
-            <img src="{% static 'meu_app/images/camisa2.png' %}" alt="camisa goblin preto">
+            <img src="{% static 'meu_app/images/black-goblin-shirt.png' %}" alt="camisa goblin preto frente" class="camisa-frente">
+            <img src="{% static 'meu_app/images/black-goblin-shirt-back.png' %}" alt="camisa goblin preto verso" class="camisa-verso">
             <p>Black Miles Goblin - R$ 159,99</p>
         </div>
         <div class="camisas">
-            <img src="{% static 'meu_app/images/camisa3.png' %}" alt="camisa goblin branco">
+            <img src="{% static 'meu_app/images/white-goblin-shirt.png' %}" alt="camisa goblin branco frente" class="camisa-frente">
+            <img src="{% static 'meu_app/images/white-goblin-shirt-back.png' %}" alt="camisa goblin branco verso" class="camisa-verso">
             <p>White Miles Goblin - R$ 159,99</p>
         </div>
         <div class="camisas">
-            <img src="{% static 'meu_app/images/camisa4.png' %}" alt="camisa oval preto">
+            <img src="{% static 'meu_app/images/black-oval-shirt.png' %}" alt="camisa oval preto frente" class="camisa-frente">
+            <img src="{% static 'meu_app/images/black-oval-shirt-back.png' %}" alt="camisa oval preto verso" class="camisa-verso">
             <p>Black Miles Oval - R$ 159,99</p>
         </div>
         <div class="camisas">
-            <img src="{% static 'meu_app/images/camisa5.png' %}" alt="camisa sketch branco">
+            <img src="{% static 'meu_app/images/white-sketch-shirt.png' %}" alt="camisa sketch branco frente" class="camisa-frente">
+            <img src="{% static 'meu_app/images/white-sketch-shirt-back.png' %}" alt="camisa sketch branco verso" class="camisa-verso">
             <p>White Miles Sketch - R$ 159,99</p>
         </div>
         <div class="camisas">
-            <img src="{% static 'meu_app/images/camisa6.png' %}" alt="camisa bora preto">
+            <img src="{% static 'meu_app/images/black-bora-shirt.png' %}" alt="camisa bora preto frente" class="camisa-frente">
+            {% comment %} <img src="{% static 'meu_app/images/black-bora-shirt-back.png' %}" alt="camisa bora preto verso" class="camisa-verso"> {% endcomment %}
             <p>Black Miles Bora 2008 - R$ 159,99</p>
         </div>
     </div>

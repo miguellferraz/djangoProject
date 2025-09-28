@@ -1,77 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding-top: 80px;
-    font-family: 'Instrument Sans';
-    background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 90px;
+  font-family: "Instrument Sans";
+  background-color: #ffffff;
 }
 
 main {
-    min-width: 95vw;
-    margin: 20px auto;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
+  min-width: 95vw;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
 }
 
 footer {
-    background-color: #383838;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-    font-size: 14px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  background-color: #383838;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+  font-size: 14px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: static;
 }
 
 header {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .header-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
-    margin-left: 20px;
-    height: 60px;
-    width: auto;
+  margin-right: 20px;
+  height: 60px;
+  width: auto;
 }
 
-
 .navbar {
-    margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px 0;
 }
 
 .navbar a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    margin-right: 20px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 .navbar a:hover {
-    color: #383838;
+  color: #383838;
 }
 
+.pagina-sobre main {
+    min-width: 0; 
+    max-width: 900px; 
+    width: 90%; 
+}
 
+@media (max-width: 768px) {
+    
+    header {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px 20px; 
+        box-sizing: border-box;
+    }
+
+    .logo {
+        width: 200px;
+        height: auto;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center; 
+        width: 100%; 
+        padding: 0; 
+    }
+    
+    .navbar a {
+        margin: 0 8px; 
+        font-size: 0.9em; 
+        white-space: nowrap; 
+    }
+
+    table {
+        display: block; 
+        overflow-x: auto;
+        white-space: nowrap; 
+        width: 100%;
+    }
+    
+    .add-produto {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .pagina-sobre main {
+        max-width: 90%;
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 769px) {
+    header {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 10px 30px;
+    }
+
+    .navbar {
+        flex-direction: row; 
+        padding: 0;
+        margin-left: auto; 
+    }
+}
